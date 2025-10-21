@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>EveryDollar</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h1>EveryDollar</h1>
+    <p>Every Dollar Counts!</p>
+
+    <!---------------------------------------------------------------------------------->
+
+<div class="container">
+
+    <div id="addTransactionSection">
+        <input id="itemInput" placeholder="Item name">
+        <input id="descInput" placeholder="Description">
+        <input id="amountInput" placeholder="Amount" type="number">
+        <input id="categoryInput" placeholder="Category">
+        <input id="dateInput" type="date">
+        <button id="addTransactionBtn">Add Transaction</button>
+        <button id="clearBtn">clear</button>
+    </div>
+
+
+       <!---------------------------------------------------------------------------------->
+
+    <div id="allTransactionsSection">
+        <button id="getTransactionsBtn">Get Transactions</button>
+        <button id="hideBtn">Hide</button>
+        <div id="transactionList"></div>
+    </div>
+
+    
+
+    <!---------------------------------------------------------------------------------->
+
+    <div id="searchSection">
+        <input id="searchItemInput" placeholder="Search item">
+        <button id="searchItemBtn">Search</button>
+        <div id="searchList"></div>
+    </div>
+
+
+   
+
+    <!---------------------------------------------------------------------------------->
+
+    <div id="transactionCostSection">
+        <button id="getTransactionCostsBtn">Get Total Costs</button>
+        <p id="totalDisplay"></p>
+    </div>
+
+
+</div>
+  
+
+
+</body>
+
+</html>
