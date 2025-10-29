@@ -115,21 +115,24 @@ document.getElementById("searchItemBtn").addEventListener("click", async () => {
     const response = await fetch(`${baseUrl}/search/${item}`);
     const transactions = await response.json();
 
-     const list = document.getElementById("searchList");
+    const list = document.getElementById("searchList");
     list.innerHTML = transactions
         .map(
             (t) => `
-        <p>
-          <b>${t.item}</b> — $${t.amount} <br>
-          Category: ${t.category} <br>
-          Date: ${t.date} <br>
-          Description: ${t.description}
-        </p>
+        <div class="search-card">
+          <div class="search-header">
+            <span class="search-item-name">${t.item}</span>
+            <span class="search-amount">$${t.amount}</span>
+          </div>
+          <div class="search-details">
+            <span class="search-category">${t.category}</span>
+            <span class="search-date">${t.date}</span>
+          </div>
+          <div class="search-description">${t.description}</div>
+        </div>
       `
         )
         .join("");
-
-})
-
+});
 
 
