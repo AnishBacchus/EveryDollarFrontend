@@ -3,64 +3,64 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>EveryDollar</title>
+    <title id="title">EveryDollar</title>
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
 
 <body>
 
-    <h1>EveryDollar</h1>
-    <p>Every Dollar Counts!</p>
+    <h1 style="font-size: 40px;">EveryDollar</h1>
+    <p style="color: black;">Every Dollar Counts!</p>
 
     <!---------------------------------------------------------------------------------->
 
 <div class="container">
 
-    <div id="addTransactionSection">
-        <input id="itemInput" placeholder="Item name">
-        <input id="descInput" placeholder="Description">
-        <input id="amountInput" placeholder="Amount" type="number">
-        <input id="categoryInput" placeholder="Category">
-        <input id="dateInput" type="date">
-        <button id="addTransactionBtn">Add Transaction</button>
-        <button id="clearBtn">clear</button>
-    </div>
+    <div class="leftSide">
 
+    <!---------------------------------------------------------------------------------->
 
-       <!---------------------------------------------------------------------------------->
+        <div id="addTransactionSection">
+            <input id="itemInput" placeholder="Item name">
+            <input id="descInput" placeholder="Description">
+            <input id="amountInput" placeholder="Amount" type="number">
+            <input id="categoryInput" placeholder="Category">
+            <input id="dateInput" type="date" placeholder="Date">
+            <button id="addTransactionBtn">Add Transaction</button>
+            <button id="clearBtn">clear</button>
+        </div>
 
-    <div id="allTransactionsSection">
-        <button id="getTransactionsBtn">Get Transactions</button>
-        <button id="hideBtn">Hide</button>
-        <div id="transactionList"></div>
-    </div>
-
+    <!---------------------------------------------------------------------------------->
     
+        <div id="allTransactionsSection">
+            <button id="getTransactionsBtn">Get Transactions</button>
+            <button id="hideBtn">Hide</button>
+            <div id="transactionList"></div>
+
+            <input id="searchItemInput" placeholder="Search item">
+            <button id="searchItemBtn">Search</button>
+            <div id="searchList"></div>
+            
+    <!---------------------------------------------------------------------------------->
+        
+            <button id="getTransactionCostsBtn">Get Total Costs</button>
+            <p id="totalDisplay"></p>
+        </div>
+    </div>
 
     <!---------------------------------------------------------------------------------->
 
-    <div id="searchSection">
-        <input id="searchItemInput" placeholder="Search item">
-        <button id="searchItemBtn">Search</button>
-        <div id="searchList"></div>
+    <div class="rightSide">
+        <div id="chart">Chart</div>
+        <div id="budget">Budget</div>
     </div>
-
-
-   
-
-    <!---------------------------------------------------------------------------------->
-
-    <div id="transactionCostSection">
-        <button id="getTransactionCostsBtn">Get Total Costs</button>
-        <p id="totalDisplay"></p>
-    </div>
-
 
 </div>
   
 
-
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 
 </html>

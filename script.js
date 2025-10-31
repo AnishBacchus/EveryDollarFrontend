@@ -135,4 +135,8 @@ document.getElementById("searchItemBtn").addEventListener("click", async () => {
         .join("");
 });
 
+flatpickr("#dateInput", {
+  dateFormat: "m-d-Y"
+});
+
 
