@@ -3,18 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title id="title">EveryDollar</title>
+    <title id="title">Login</title>
+    <link rel="stylesheet" href="loginStyle.css" />
 </head>
 
 <body>
-    <h1>Hello World!</h1>
-
-    <div>
-         <button id="signInBtn">Sign In</button>
-    </div>
+    <h1 style="font-size: 40px;">EveryDollar</h1>
    
+    <div id="textSection">
+    <p>Save time, Save Money, Budget Efficiently. Every Dollar Counts!</p>
+    </div>
 
-    <script src="loginScript.js"></script>
+    <div id="login">
+        <p id="logInText">Log In</p>
+        <p style="color: black; font-size: 18px; margin-top: -20px;">Don't have an account? Sign Up</p>
+        <input id="usernameInput" placeholder="Username">
+        <input id="passwordInput" placeholder="Password">
+        <p style="color: #7FB7BE; font-size: 18px;">Forgot Password?</p>
+        <button id="signInBtn" disabled>Sign In</button>
+
+    </div>
+
+
+ <script src="loginScript.js"></script>
 </body>
 
 </html>

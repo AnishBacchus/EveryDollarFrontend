@@ -1,0 +1,74 @@
+@font-face {
+    font-family: "Merriweather";
+    src: url("./fonts/Merriweather-Variable.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #57cc99;
+    text-align: center;
+    color: #fafafa;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+    gap: 10px;
+    align-items: center;
+    padding: 75px;
+    width: 400px;
+    height: auto;
+    border-radius: 25px;
+    margin: 0px;
+    margin-top: 0px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+
+}
+
+  #logInText{
+    color: black;
+    font-size: 25px;
+    margin-top: -30px;
+    }
+
+#usernameInput,
+#passwordInput {
+    width: 350px;
+    padding: 10px;
+    font-family: Merriweather, serif;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#signInBtn {
+    width: 200px;
+    padding: 10px;
+    font-family: Merriweather, serif;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#signInBtn.active {
+    background-color: #57cc99;
+    cursor: pointer;
+}
+
+#textSection {
+    color: black;
+    font-family: Merriweather, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
