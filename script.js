@@ -1,6 +1,6 @@
 
 
-const baseUrl = "http://localhost:8083/users/2/transactions"; // example userId = 1
+const baseUrl = "http://localhost:8083/users/2/transactions"; 
 
 
 //------------------------------------------------------------------------------------

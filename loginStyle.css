@@ -35,6 +35,7 @@ body {
   #logInText{
     color: black;
     font-size: 25px;
+    font-weight: bold;
     margin-top: -30px;
     }
 
@@ -67,7 +68,7 @@ body {
 }
 
 #textSection {
-    color: black;
+    color: #212529;
     font-family: Merriweather, serif;
     font-weight: bold;
     font-size: 20px;
