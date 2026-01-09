@@ -13,10 +13,17 @@ body {
     background-color: #57cc99;
     text-align: center;
     color: #fafafa;
-     font-family: Merriweather, serif;
+    font-family: Merriweather, serif;
 }
 
-#login {
+#textSection {
+    color: #212529;
+    font-family: Merriweather, serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#signUp {
     display: flex;
     flex-direction: column;
     background-color: #F0FFF0;
@@ -30,16 +37,17 @@ body {
     margin-top: 0px;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
     border: 1px solid rgba(0, 0, 0, 0.06);
-
 }
 
-  #logInText{
+#signUpText {
     color: black;
     font-size: 25px;
     font-weight: bold;
     margin-top: -30px;
-    }
+}
 
+#nameInput,
+#emailInput,
 #usernameInput,
 #passwordInput {
     width: 350px;
@@ -52,7 +60,7 @@ body {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-#signInBtn {
+#signUpBtn {
     width: 200px;
     padding: 10px;
     font-family: Merriweather, serif;
@@ -63,24 +71,7 @@ body {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-#signInBtn.active {
+#signUpBtn.active {
     background-color: #57cc99;
     cursor: pointer;
-}
-
-#textSection {
-    color: #212529;
-    font-family: Merriweather, serif;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.signup-link {
-  color: #57cc99;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.signup-link:hover {
-  text-decoration: underline;
 }

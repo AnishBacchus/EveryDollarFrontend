@@ -54,58 +54,7 @@ document.getElementById("clearBtn").addEventListener("click", async () => {
 });
 
 
-//------------------------------------------------------------------------------------
-// Get all transactions a user has. 
 
-document.getElementById("getTransactionsBtn").addEventListener("click", async () => {
-    const response = await fetch(`${baseUrl}`);
-    const transactions = await response.json();
-
-    const list = document.getElementById("transactionList");
-    list.innerHTML = transactions
-        .map(
-            (t) => `
-        <div class="transaction-card">
-          <div class="transaction-header">
-            <span class="item-name">${t.item}</span>
-            <span class="amount">$${t.amount}</span>
-          </div>
-          <div class="transaction-details">
-            <span class="category">${t.category}</span>
-            <span class="date">${t.date}</span>
-          </div>
-          <div class="description">${t.description}</div>
-        </div>
-      `
-        )
-        .join("");
-
-        if(list.style.display === "none"){
-            list.style.display = "block";
-        }
-});
-
-//------------------------------------------------------------------------------------
-// A hide button to hide the transactions that appear on the website. 
-
-document.getElementById("hideBtn").addEventListener("click", async () => {
- const transactionListDiv =  document.getElementById("transactionList");
-        
-       
-        transactionListDiv.style.display = "none";
-   
-})
-
-
-//------------------------------------------------------------------------------------
-// Get the costs of all transactions a user has.
-
-document.getElementById("getTransactionCostsBtn").addEventListener("click", async () => {
-    const response = await fetch(`${baseUrl}/total`);
-    const total = await response.text();
-
-    alert(`Total transaction costs:  $${total}`);
-});
 
 //------------------------------------------------------------------------------------
 // Search an item transaction for a user.
@@ -137,6 +86,34 @@ document.getElementById("searchItemBtn").addEventListener("click", async () => {
 
 flatpickr("#dateInput", {
   dateFormat: "m-d-Y"
+});
+
+
+//--------------------------------------------------------------------------------------
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const response = await fetch(baseUrl);
+  const transactions = await response.json();
+
+  const list = document.getElementById("transactionList");
+
+  list.innerHTML = transactions
+    .map(
+      (t) => `
+        <div class="transaction-card">
+          <div class="transaction-header">
+            <span class="item-name">${t.item}</span>
+            <span class="amount">$${t.amount}</span>
+          </div>
+          <div class="transaction-details">
+            <span class="category">${t.category}</span>
+            <span class="date">${t.date}</span>
+          </div>
+          <div class="description">${t.description}</div>
+        </div>
+      `
+    )
+    .join("");
 });
 
 

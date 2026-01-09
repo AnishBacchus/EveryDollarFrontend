@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Merriweather";
+  src: url("./fonts/Merriweather-Variable.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 body {
-  background-color: #edede9;
+  background-color: #F0FFF0;
   text-align: center;
   color: #57cc99;
+  font-family: Merriweather, serif;
 }
 
 
@@ -16,7 +24,7 @@ body {
 }
 
 .leftSide {
-  flex: 2; 
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -40,7 +48,7 @@ body {
 #searchItemInput {
   width: 200px;
   padding: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Merriweather, serif;
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 6px;
@@ -62,20 +70,19 @@ body {
 /* Buttons */
 #addTransactionBtn,
 #searchItemBtn,
-#getTransactionCostsBtn,
-#getTransactionsBtn {
+#getTransactionCostsBtn {
   background-color: rgb(105, 193, 105);
   color: black;
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
+  font-family: Merriweather, serif;
 }
 
 #addTransactionBtn:hover,
 #searchItemBtn:hover,
-#getTransactionCostsBtn:hover,
-#getTransactionsBtn:hover {
+#getTransactionCostsBtn:hover {
   box-shadow: 0 0 20px rgb(191, 255, 191);
 }
 
@@ -87,22 +94,14 @@ body {
   padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
+  font-family: Merriweather, serif;
 }
 
-/* Hide button */
-#hideBtn {
-  background-color: rgb(170, 171, 170);
-  color: black;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
 /* Section Divs*/
 
 #addTransactionSection,
-#allTransactionsSection{
+#allTransactionsSection {
   margin-top: 0px;
 }
 
@@ -119,7 +118,7 @@ body {
 }
 
 
-#allTransactionsSection{
+#allTransactionsSection {
   background-color: #57cc99;
   padding: 75px;
   width: 1100px;
@@ -135,7 +134,7 @@ body {
 
 
 #chart,
-#budget{
+#budget {
   background-color: #57cc99;
   padding: 75px;
   width: 300px;
@@ -280,4 +279,11 @@ body {
 #searchList {
   text-align: center;
   margin-top: 20px;
+}
+
+.searchRow {
+  display: flex;
+  justify-content: flex-start; /* 👈 moves left */
+  gap: 10px;
+  margin-top: -30px;
 }

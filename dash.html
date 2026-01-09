@@ -12,55 +12,55 @@
 <body>
 
     <h1 style="font-size: 40px;">EveryDollar</h1>
-    <p style="color: black;">Every Dollar Counts!</p>
+    <p style="color: black; font-weight: bold; font-size: 20px;">Every Dollar Counts!</p>
 
     <!---------------------------------------------------------------------------------->
 
-<div class="container">
+    <div class="container">
 
-    <div class="leftSide">
+        <div class="leftSide">
 
-    <!---------------------------------------------------------------------------------->
+            <!---------------------------------------------------------------------------------->
 
-        <div id="addTransactionSection">
-            <input id="itemInput" placeholder="Item name">
-            <input id="descInput" placeholder="Description">
-            <input id="amountInput" placeholder="Amount" type="number">
-            <input id="categoryInput" placeholder="Category">
-            <input id="dateInput" type="date" placeholder="Date">
-            <button id="addTransactionBtn">Add Transaction</button>
-            <button id="clearBtn">clear</button>
+            <div id="addTransactionSection">
+                <input id="itemInput" placeholder="Item name">
+                <input id="descInput" placeholder="Description">
+                <input id="amountInput" placeholder="Amount" type="number">
+                <input id="categoryInput" placeholder="Category">
+                <input id="dateInput" type="date" placeholder="Date">
+                <button id="addTransactionBtn">Add Transaction</button>
+                <button id="clearBtn">clear</button>
+            </div>
+
+            <!---------------------------------------------------------------------------------->
+
+            <div id="allTransactionsSection">
+
+                <div class="searchRow">
+                    <input id="searchItemInput" placeholder="Search item">
+                    <button id="searchItemBtn">Search</button>
+                </div>
+
+                <div id="searchList"></div>
+
+                <!---------------------------------------------------------------------------------->
+
+                <div id="transactionList"></div>
+
+            </div>
         </div>
 
-    <!---------------------------------------------------------------------------------->
-    
-        <div id="allTransactionsSection">
-            <button id="getTransactionsBtn">Get Transactions</button>
-            <button id="hideBtn">Hide</button>
-            <div id="transactionList"></div>
+        <!---------------------------------------------------------------------------------->
 
-            <input id="searchItemInput" placeholder="Search item">
-            <button id="searchItemBtn">Search</button>
-            <div id="searchList"></div>
-            
-    <!---------------------------------------------------------------------------------->
-        
-            <button id="getTransactionCostsBtn">Get Total Costs</button>
-            <p id="totalDisplay"></p>
+        <div class="rightSide">
+            <div id="chart">Chart</div>
+            <div id="budget">Budget</div>
         </div>
+
     </div>
 
-    <!---------------------------------------------------------------------------------->
 
-    <div class="rightSide">
-        <div id="chart">Chart</div>
-        <div id="budget">Budget</div>
-    </div>
-
-</div>
-  
-
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>
 
 </html>
